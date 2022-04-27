@@ -4,7 +4,6 @@ const os = require("os");
 
 fs.readFile("db.json", "utf-8", (err, data) => {
   if (err) return console.log(err);
-  console.log(JSON.parse(data).length);
   loopQuiz(JSON.parse(data)).then((count) =>
     console.log(`You got ${count} correct answers!`)
   );
